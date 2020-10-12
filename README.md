@@ -1,6 +1,6 @@
 # spring-boot-basic-app
 
-##Run application
+## Run application
 
 ```
 mvn spring-boot:run
