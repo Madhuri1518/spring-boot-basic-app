@@ -9,7 +9,7 @@ mvn spring-boot:run
 Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
 
 
-## Run docker locally
+## Build and Run docker image locally
 
 Build docker image
 
