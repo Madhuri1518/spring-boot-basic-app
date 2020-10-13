@@ -6,7 +6,7 @@ pipeline {
     //}
     environment {
             imageName = 'test-spring-boot'
-                //DOCKER_HUB_USER_NAME=credentials('DOCKER_HUB_USER_NAME')
+                DOCKER_HUB_USER_NAME=credentials('DOCKER_HUB_USER_NAME')
                 //DOCKER_HUB_PASSWORD=credentials('DOCKER_HUB_PASSWORD')
     }
 
@@ -16,8 +16,8 @@ pipeline {
 
                 // Run Maven on a Unix agent.
                 //sh "mvn -Dmaven.test.failure.ignore=true clean package"
-                sh "docker run hello-world"
-
+                //sh "docker run hello-world"
+                sh "echo ${DOCKER_HUB_USER_NAME}"
             }
         }
         
