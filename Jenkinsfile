@@ -6,8 +6,8 @@ pipeline {
     //}
     environment {
             imageName = 'test-spring-boot'
-                DOCKER_HUB_USER_NAME=credentials('DOCKER_HUB_USER_NAME')
-                DOCKER_HUB_PASSWORD=credentials('DOCKER_HUB_PASSWORD')
+                //DOCKER_HUB_USER_NAME=credentials('DOCKER_HUB_USER_NAME')
+                //DOCKER_HUB_PASSWORD=credentials('DOCKER_HUB_PASSWORD')
     }
 
     stages {
@@ -20,21 +20,7 @@ pipeline {
 
             }
         }
-        stage('Building Docker Image for frontend') {
-            steps {
-                
-                    script {
-                        docker.build imageName + ":$BUILD_NUMBER"
-                    }
-              
-            }
-        }
-        stage('Deploy Docker Image') {
-            steps {
-                sh 'docker login -u ${DOCKER_HUB_USER_NAME} -p ${DOCKER_HUB_PASSWORD}'
-                sh 'docker push ' + imageName + ":${BUILD_NUMBER}"
-            }
-        }
+        
 
     }
 }
