@@ -1,9 +1,9 @@
 pipeline {
     agent any
-    tools {
+    //tools {
             // Install the Maven version configured as "M3" and add it to the path.
-            maven 'apache-maven-3.0.1'
-    }
+            //maven 'apache-maven-3.0.1'
+    //}
     environment {
             imageName = 'test-spring-boot'
                 DOCKER_HUB_USER_NAME=credentials('DOCKER_HUB_USER_NAME')
