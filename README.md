@@ -1,4 +1,4 @@
-# spring-boot-basic-app
+# spring-boot-basic-application
 
 ## Run application
 
